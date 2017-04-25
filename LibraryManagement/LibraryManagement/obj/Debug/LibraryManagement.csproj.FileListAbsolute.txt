@@ -1,0 +1,10 @@
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll.config
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\bin\LibraryManagement.pdb
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\bin\EntityFramework.dll
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.dll
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\bin\EntityFramework.xml
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.xml
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.dll
+c:\users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\naq259\documents\visual studio 2013\Projects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache

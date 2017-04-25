@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LibraryManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LibraryManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfKhoa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Khoa" nillable="true" type="tns:Khoa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKhoa" nillable="true" type="tns:ArrayOfKhoa" />
+  <xs:complexType name="Khoa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocGias" nillable="true" type="tns:ArrayOfDocGia" />
+      <xs:element minOccurs="0" name="MaKhoa" type="xs:int" />
+      <xs:element minOccurs="0" name="TenKhoa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThongTin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Khoa" nillable="true" type="tns:Khoa" />
+  <xs:complexType name="ArrayOfDocGia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocGia" nillable="true" type="tns:DocGia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocGia" nillable="true" type="tns:ArrayOfDocGia" />
+  <xs:complexType name="DocGia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiaChi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoTen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Khoa" nillable="true" type="tns:Khoa" />
+      <xs:element minOccurs="0" name="LoaiTheThuVien" nillable="true" type="tns:LoaiTheThuVien" />
+      <xs:element minOccurs="0" name="MaDocGia" type="xs:int" />
+      <xs:element minOccurs="0" name="MaKhoa" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaLoaiThe" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NgaySinh" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PhieuMuons" nillable="true" type="tns:ArrayOfPhieuMuon" />
+      <xs:element minOccurs="0" name="SoDienThoai" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocGia" nillable="true" type="tns:DocGia" />
+  <xs:complexType name="LoaiTheThuVien">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocGias" nillable="true" type="tns:ArrayOfDocGia" />
+      <xs:element minOccurs="0" name="MaLoaiThe" type="xs:int" />
+      <xs:element minOccurs="0" name="SoSachToiDa" type="xs:int" />
+      <xs:element minOccurs="0" name="TenLoaiThe" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoaiTheThuVien" nillable="true" type="tns:LoaiTheThuVien" />
+  <xs:complexType name="ArrayOfPhieuMuon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhieuMuon" nillable="true" type="tns:PhieuMuon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhieuMuon" nillable="true" type="tns:ArrayOfPhieuMuon" />
+  <xs:complexType name="PhieuMuon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChiTietMuons" nillable="true" type="tns:ArrayOfChiTietMuon" />
+      <xs:element minOccurs="0" name="DocGia" nillable="true" type="tns:DocGia" />
+      <xs:element minOccurs="0" name="HanTra" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MaDocGia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaPhieuMuon" type="xs:int" />
+      <xs:element minOccurs="0" name="MaThuThu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NgayMuon" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NgayTra" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ThuThu" nillable="true" type="tns:ThuThu" />
+      <xs:element minOccurs="0" name="TinhTrangTra" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhieuMuon" nillable="true" type="tns:PhieuMuon" />
+  <xs:complexType name="ArrayOfChiTietMuon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChiTietMuon" nillable="true" type="tns:ChiTietMuon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChiTietMuon" nillable="true" type="tns:ArrayOfChiTietMuon" />
+  <xs:complexType name="ChiTietMuon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaPhieuMuon" type="xs:int" />
+      <xs:element minOccurs="0" name="MaSach" type="xs:int" />
+      <xs:element minOccurs="0" name="PhieuMuon" nillable="true" type="tns:PhieuMuon" />
+      <xs:element minOccurs="0" name="Sach" nillable="true" type="tns:Sach" />
+      <xs:element minOccurs="0" name="SoLuong" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChiTietMuon" nillable="true" type="tns:ChiTietMuon" />
+  <xs:complexType name="Sach">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChiTietMuons" nillable="true" type="tns:ArrayOfChiTietMuon" />
+      <xs:element minOccurs="0" name="DanhMucSach" nillable="true" type="tns:DanhMucSach" />
+      <xs:element minOccurs="0" name="GiaTien" type="xs:double" />
+      <xs:element minOccurs="0" name="MaDanhMuc" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaNXB" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaSach" type="xs:int" />
+      <xs:element minOccurs="0" name="MoTa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NamXuatBan" type="xs:int" />
+      <xs:element minOccurs="0" name="NgayNhapKho" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NhaXuatBan" nillable="true" type="tns:NhaXuatBan" />
+      <xs:element minOccurs="0" name="SoLuongTon" type="xs:int" />
+      <xs:element minOccurs="0" name="SoTrang" type="xs:int" />
+      <xs:element minOccurs="0" name="ThamGias" nillable="true" type="tns:ArrayOfThamGia" />
+      <xs:element minOccurs="0" name="TieuDeSach" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sach" nillable="true" type="tns:Sach" />
+  <xs:complexType name="DanhMucSach">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaDanhMuc" type="xs:int" />
+      <xs:element minOccurs="0" name="Saches" nillable="true" type="tns:ArrayOfSach" />
+      <xs:element minOccurs="0" name="TenDanhMuc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DanhMucSach" nillable="true" type="tns:DanhMucSach" />
+  <xs:complexType name="ArrayOfSach">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sach" nillable="true" type="tns:Sach" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSach" nillable="true" type="tns:ArrayOfSach" />
+  <xs:complexType name="NhaXuatBan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiaChi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaNXB" type="xs:int" />
+      <xs:element minOccurs="0" name="Saches" nillable="true" type="tns:ArrayOfSach" />
+      <xs:element minOccurs="0" name="SoDienThoai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TenNXB" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NhaXuatBan" nillable="true" type="tns:NhaXuatBan" />
+  <xs:complexType name="ArrayOfThamGia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThamGia" nillable="true" type="tns:ThamGia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThamGia" nillable="true" type="tns:ArrayOfThamGia" />
+  <xs:complexType name="ThamGia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaSach" type="xs:int" />
+      <xs:element minOccurs="0" name="MaTacGia" type="xs:int" />
+      <xs:element minOccurs="0" name="Sach" nillable="true" type="tns:Sach" />
+      <xs:element minOccurs="0" name="TacGia" nillable="true" type="tns:TacGia" />
+      <xs:element minOccurs="0" name="VaiTro" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThamGia" nillable="true" type="tns:ThamGia" />
+  <xs:complexType name="TacGia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HoTen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaTacGia" type="xs:int" />
+      <xs:element minOccurs="0" name="ThamGias" nillable="true" type="tns:ArrayOfThamGia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TacGia" nillable="true" type="tns:TacGia" />
+  <xs:complexType name="ThuThu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiaChi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoTen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaThuThu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MatKhau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NgaySinh" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PhanCap" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PhieuMuons" nillable="true" type="tns:ArrayOfPhieuMuon" />
+      <xs:element minOccurs="0" name="SoDienThoai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaiKhoan" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThuThu" nillable="true" type="tns:ThuThu" />
+  <xs:complexType name="ArrayOfLoaiTheThuVien">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LoaiTheThuVien" nillable="true" type="tns:LoaiTheThuVien" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLoaiTheThuVien" nillable="true" type="tns:ArrayOfLoaiTheThuVien" />
+  <xs:complexType name="ArrayOfDanhMucSach">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DanhMucSach" nillable="true" type="tns:DanhMucSach" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDanhMucSach" nillable="true" type="tns:ArrayOfDanhMucSach" />
+  <xs:complexType name="ArrayOfNhaXuatBan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NhaXuatBan" nillable="true" type="tns:NhaXuatBan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNhaXuatBan" nillable="true" type="tns:ArrayOfNhaXuatBan" />
+  <xs:complexType name="ArrayOfThuThu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThuThu" nillable="true" type="tns:ThuThu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThuThu" nillable="true" type="tns:ArrayOfThuThu" />
+  <xs:complexType name="ArrayOfTacGia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TacGia" nillable="true" type="tns:TacGia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTacGia" nillable="true" type="tns:ArrayOfTacGia" />
+</xs:schema>

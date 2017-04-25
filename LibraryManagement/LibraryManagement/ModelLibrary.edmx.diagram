@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7786883c1c2549a9acb17d987e45059c" Name="Diagram">
+        <EntityTypeShape EntityType="db_libraryModel.ChiTietMuon" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.DanhMucSach" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.DocGia" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.Khoa" Width="1.5" PointX="1.5" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.LoaiTheThuVien" Width="1.5" PointX="1.5" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.NhaXuatBan" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.PhieuMuon" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.Sach" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.TacGia" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.ThamGia" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_libraryModel.ThuThu" Width="1.5" PointX="0.75" PointY="23.5" IsExpanded="true" />
+        <AssociationConnector Association="db_libraryModel.FK__ChiTietMu__MaPhi__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__ChiTietMu__MaSac__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__Sach__MaDanhMuc__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__DocGia__MaKhoa__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__DocGia__MaLoaiTh__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__PhieuMuon__MaDoc__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__Sach__MaNXB__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__PhieuMuon__MaThu__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__ThamGia__MaSach__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="db_libraryModel.FK__ThamGia__MaTacGi__22AA2996" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
